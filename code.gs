@@ -21,7 +21,7 @@ function doGet(e) {
       }
       const old = getFileContentByName('CODES.txt');
       DriveApp.getFilesByName('CODES.txt').next().setContent(old + "\n" + res);
-      return HtmlService.createHtmlOutput(`<h1>生成しました!</h1><p>新しく生成されたコードは下記を参照してください.<br>コードを返信してください </p><span>====以下がトークンです====</span><pre>${res}</pre>`);
+      return HtmlService.createHtmlOutput(`<h1>生成しました!</h1><p>新しく生成されたコードは下記を参照してください.<br>コードは返信してください </p><span>====以下がコードです====</span><pre>${res}</pre>`);
     } else {
       return HtmlService.createHtmlOutput('<b>値が不正なため、ログインできません</b>');
     }
